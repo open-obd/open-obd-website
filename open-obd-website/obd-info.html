@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yet another automobile tester/logger - For Car Diagnostics, Monitoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav container">
+            <div class="logo"><i class="fas fa-car"></i> open-obd</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="obd-info.html">OBD2Info</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="aboutUs.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 class="title">Info about OBD</h2>
+        <div class="row">
+            <p>
+                On-board diagnostics (OBD) is an automotive term referring to a vehicle's self-diagnostic and reporting
+                capability. OBD systems give the vehicle
+                owner or repair technician access to the status of the various vehicle sub-systems. The amount of
+                diagnostic
+                information available via OBD has
+                varied widely since its introduction in the early 1980s versions of on-board vehicle computers. Early
+                versions of OBD would simply illuminate a
+                malfunction indicator light or "idiot light" if a problem was detected but would not provide any
+                information
+                as to the nature of the problem.
+                Modern OBD implementations use a standardized digital communications port to provide real-time data in
+                addition to a standardized series of
+                diagnostic trouble codes, or DTCs, which allow a person to rapidly identify and remedy malfunctions
+                within
+                the vehicle.
+            </p>
+            <img src="img/OBD_connector_shape.svg.png" alt="" style="width: 300px; height: 120px;">
+        </div>
+        <br><br>
+        <button class="accordion">OBD-II diagnostic data available</button>
+        <div class="panel">
+            <p> OBD-II provides access to data from the engine control unit (ECU) and offers a valuable source of
+                information when troubleshooting problems inside a vehicle. The SAE J1979 standard defines a method for
+                requesting various diagnostic data and a list of standard parameters that might be available from the
+                ECU.
+                Manufacturers are not required to implement all PIDs listed in J1979 and they are allowed to include
+                proprietary PIDs that are not listed. The PID request and data retrieval system gives access to real
+                time
+                performance data as well as flagged DTCs. Individual manufacturers often enhance the OBD-II code set
+                with
+                additional proprietary DTCs.</p>
+        </div>
+        <br>
+        <button class="accordion">Mode of operation according to ISO 15031</button>
+        <div class="panel">
+            <ul>
+                <li>Mode $01 is used to identify what powertrain information is available to the scan tool.</li>
+                <li>Mode $02 displays Freeze Frame data.[19]</li>
+                <li>Mode $03 lists the emission-related "confirmed" diagnostic trouble codes stored. It displays exact
+                    numeric, 4 digit codes identifying the faults.</li>
+                <li>Mode $04 is used to clear emission-related diagnostic information. This includes clearing the stored
+                    pending/confirmed DTCs and Freeze Frame data.</li>
+                <li>Mode $05 displays the oxygen sensor monitor screen and the test results gathered about the oxygen
+                    sensor. There are ten numbers available for diagnostics:</li>
+                <li>Mode $06 is a Request for On-Board Monitoring Test Results for Continuously and Non-Continuously
+                    Monitored System. There are typically a minimum value, a maximum value, and a current value for each
+                    non-continuous monitor.</li>
+                <li>Mode $07 is a Request for emission-related diagnostic trouble codes detected during current or last
+                    completed driving cycle. It enables the external test equipment to obtain "pending" diagnostic
+                    trouble
+                    codes detected during current or last completed driving cycle for emission-related
+                    components/systems.
+                    This is used by service technicians after a vehicle repair, and after clearing diagnostic
+                    information to
+                    see test results after a single driving cycle to determine if the repair has fixed the problem.</li>
+                <li>Mode $08 could enable the off-board test device to control the operation of an on-board system,
+                    test, or
+                    component.</li>
+                <li>Mode $09 is used to retrieve vehicle information.</li>
+                <li>Mode $0A lists emission-related "permanent" diagnostic trouble codes stored. As per CARB, any
+                    diagnostic
+                    trouble codes that is commanding MIL on and stored into non-volatile memory shall be logged as a
+                    permanent fault code.</li>
+            </ul>
+        </div>
+        <br>
+        <button class="accordion">OBD-II diagnostic trouble codes</button>
+        <div class="panel">
+            <p> OBD-II diagnostic trouble codes OBD-II diagnostic trouble codes (DTCs) contain 1 letter and 4 numbers,
+                and
+                are divided into the following
+                categories:
+            <ul>
+                <li>B – Body (includes air conditioning and airbag) (1164 codes)</li>
+                <li>C – Chassis (includes ABS) (486 codes)</li>
+                <li>P – Powertrain (engine and transmission) (1688 codes)</li>
+                <li>U – Network (wiring bus) (299 codes)</li>
+            </ul>
+            </p>
+        </div>
+        <br>
+        <button class="accordion">Standards</button>
+        <div class="panel">
+            <p>
+            <ul>
+                <li>J1962 – Defines the physical connector used for the OBD-II interface.</li>
+                <li>J1850 – Defines a serial data protocol. </li>
+                <li>J1978 – Defines minimal operating standards for OBD-II scan tools</li>
+                <li>J1979 – Defines standards for diagnostic test modes</li>
+                <li>J2012 – Defines standards trouble codes and definitions.</li>
+                <li>J2178-1 – Defines standards for network message header formats and physical address assignments</li>
+                <li>J2178-2 – Gives data parameter definitions</li>
+                <li>J2178-3 – Defines standards for network message frame IDs for single byte headers</li>
+                <li>J2178-4 – Defines standards for network messages with three byte headers*</li>
+                <li>J2284-3 – Defines 500K CAN physical and data link layer</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container d-flex justify-content-between">
+            <div class="">
+                <strong>Email</strong>
+                <p>info@open-obd.net</p>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/open-obd"><i class="fab fa-github-square"></i></a>
+                <a href="https://www.youtube.com/channel/UC784_EAIHdpHe-RDClqaQeA?view_as=subscriber"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/open_obd"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/open_obd/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- <br>
+        <div class="row footertxt">
+            <p>Impressum</p>
+            <p>Datenschutzerklärung</p>
+            <p>AGBs</p>
+        </div> -->
+    </footer>
+
+    <script defer>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
